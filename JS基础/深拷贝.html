@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let obj1 = {
+      a: 'a',
+      b: 100,
+      c: {
+        aa: 'cxx',
+        bb: 'zwlj'
+      },
+      d: [1, 2, 3, 4]
+    }
+
+    function deepclone(obj) {
+      if (obj == null) return null;
+      if (typeof obj !== "object") return obj;
+      let obj2 = new obj.constructor;
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          obj2[key] = deepclone(obj[key]);
+        }
+      }
+      return obj2;
+    }
+    let obj3 = deepclone(obj1)
+    console.log(obj1, obj3);
+    console.log(obj1 === obj3);
+  </script>
+</body>
+
+</html>
