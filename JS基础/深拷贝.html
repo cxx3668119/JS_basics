@@ -9,6 +9,7 @@
 
 <body>
   <script>
+
     let obj1 = {
       a: 'a',
       b: 100,
@@ -19,18 +20,41 @@
       d: [1, 2, 3, 4]
     }
 
+    // function deepclone(obj) {
+    //   if (obj == null) return null;
+    //   if (typeof obj !== "object") return obj;
+    //   let obj2 = new obj.constructor;
+    //   for (let key in obj) {
+    //     if (obj.hasOwnProperty(key)) {
+    //       obj2[key] = deepclone(obj[key]);
+    //     }
+    //   }
+    //   return obj2;
+    // }
+    // let obj3 = deepclone(obj1)
+    // console.log(obj1, obj3);
+    // console.log(obj1 === obj3);
+
+
+    // let obj2 = JSON.parse(JSON.stringify(obj1));
+    // console.log(obj1, obj2);
+    // console.log(obj1 === obj2);
+    //不能深拷贝函数，时间，正则
+
+    //Test版
     function deepclone(obj) {
       if (obj == null) return null;
       if (typeof obj !== "object") return obj;
       let obj2 = new obj.constructor;
       for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
-          obj2[key] = deepclone(obj[key]);
+          obj2[key] = deepclone(obj[key])
         }
       }
-      return obj2;
+      return obj2
     }
-    let obj3 = deepclone(obj1)
+
+    let obj3 = deepclone(obj1);
     console.log(obj1, obj3);
     console.log(obj1 === obj3);
   </script>

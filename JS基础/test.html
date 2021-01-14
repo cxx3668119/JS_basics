@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let x = 10;
+    // function cals(e) {
+    //   return x + e;
+    // }
+    // console.log(cals(7));
+    // let a = '2' + 3 + 4
+    // console.log(a);
+    let a = { n: 1 };
+    let b = a;
+    a.x = a = { n: 2 };
+
+    console.log(a.x);
+    console.log(b.x);
+
+  </script>
+</body>
+
+</html>

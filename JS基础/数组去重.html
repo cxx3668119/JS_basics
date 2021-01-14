@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 方法1
+    // function arrheavy(arr) {
+    //   for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //       if (arr[j] == arr[i]) {
+    //         arr.splice(j, 1);
+    //         j--;
+    //       }
+    //     }
+    //   }
+    //   return arr
+    // }
+
+    // 方法2
+    function unique(arr) {
+      let newarr = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (newarr.indexOf(arr[i]) === -1) {
+          newarr.push(arr[i])
+        }
+      }
+      return newarr
+    }
+
+    let array = [1, 2, 3, 3, 2, 5, 7, 9, 11, 11];
+    let array1 = unique(array);
+    console.log(array1);
+
+  </script>
+</body>
+
+</html>

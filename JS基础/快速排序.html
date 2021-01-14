@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let list1 = [5, 8, 2, 4, 6, 9, 7]
+
+    function quickSort(list) {
+      if (list.length == 1 || list.length == 0) { return list }
+      let index = Math.floor(list.length / 2)
+      let currentItem = list.splice(index, 1);
+      let left = [];
+      let right = [];
+
+      list.forEach(item => {
+        if (item < currentItem) {
+          left.push(item)
+        } else {
+          right.push(item)
+        }
+      })
+      return quickSort(left).concat(currentItem).concat(quickSort(right))
+    }
+    const list2 = quickSort(list1)
+    console.log(list2);
+  </script>
+</body>
+
+</html>
