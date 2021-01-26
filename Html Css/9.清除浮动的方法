@@ -1,0 +1,5 @@
+在此列举常用的几种方法：
+1.额外标签法（在最后一个浮动标签后，新加一个标签，给其设置clear：both；）
+2.父级添加overflow属性（父元素添加overflow:hidden）
+3.使用after伪元素清除浮动
+4.使用before和after双伪元素清除浮动

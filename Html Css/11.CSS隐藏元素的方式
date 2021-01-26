@@ -1,0 +1,10 @@
+display:none
+不渲染
+visibility: hidden
+渲染不显示
+opacity: 0
+设置元素透明
+position: absolute
+移出页面
+了解：
+clip-path

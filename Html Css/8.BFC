@@ -1,0 +1,13 @@
+BFC属于普通流，可以看作是一个元素的属性，触发了BFC不会影响外界元素的属性
+
+1.避免外边距重叠
+2.清楚浮动
+3.阻止元素被浮动元素覆盖
+详细描述见：https://www.bilibili.com/video/BV1aZ4y1M7gW?from=search&seid=1112819055314266058
+只要元素满足下面任一条件即可触发 BFC 特性：
+
+body 根元素
+浮动元素：float 除 none 以外的值
+绝对定位元素：position (absolute、fixed)
+display 为 inline-block、table-cells、flex
+overflow 除了 visible 以外的值 (hidden、auto、scroll)

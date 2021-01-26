@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 400px;
+      height: 400px;
+      background-color: skyblue;
+      position: relative;
+      /* 第三种 */
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      /* 第一种 */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* 第二种 */
+      /* position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto; */
+    }
+  </style>
+</head>
+
+<body>
+  列举常用的几种，更多种见论坛
+  <div class="parent">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>

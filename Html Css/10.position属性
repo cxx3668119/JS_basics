@@ -1,0 +1,7 @@
+定位：
+1.static 没有定位 正常流
+2.relative 相对定位 相对正常位置进行定位
+3.absolute 绝对定位 1) 设置了absolute的元素如果存在有祖先元素设置了position属性为relative或者absolute，则这时元素的定位对象为此已设置position属性的祖先元素。
+　　2) 如果并没有设置了position属性的祖先元素，则此时相对于body进行定位。
+4.fixed 固定定位 脱离文档流 针对视图窗口位置进行定位
+5.sticky 粘性定位 滚动条 到一定视图 悬浮 当该元素的位置将要移出偏移范围时，定位又会变成fixed，根据设置的left、top等属性成固定位置的效果。
