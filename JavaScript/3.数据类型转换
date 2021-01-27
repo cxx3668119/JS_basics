@@ -1,0 +1,24 @@
+数据类型的转换
+Number()
+parseInt()
+parseFloat()
++/- （一元操作符）
+
+1. Boolean值, true--->1  false--->0
+2. null--->0
+3. 空字符串（''）---> 0
+4. 数字字符串（'123', '1.23', '0xf'）---> 123, 1.23, 15
+5. 对象则是先调用valueOf方法，看该方法的返回值是否能转化成数字，如果不行则基于这个返回值调用toString方法，再测试改返回值能不能转化成数字
+    var a = {
+        valueOf: function() {
+            return 'xyxy';
+        },
+        toString: function() {
+            return 1;
+        }
+    };
+    
+    Number(a)  // NaN
+
+其他数据类型的值.toString()
+String(其它数据类型的值)

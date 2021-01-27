@@ -1,0 +1,26 @@
+判断变量类型的方法
+typeof运算符
+instanceof运算符
+constructor(原型对象的构造函数)
+toString(内置[[Class]]属性)、Array.isArray()
+
+typeof运算符
+可以判断基本数据类型，Null会报错object 
+判断引用类型时只能判断function 除function外 其他的类型全部输出object
+
+instanceof运算符
+instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置. 原始值使用instanceof都会返回false，如果使用new 声明 是可以检测出来。对于是使用new声明的类型，它还可以检测出多层继承关系。
+用来判断继承关系和引用数据类型很合适
+不能用来判断基础数据类型
+原理是__proto__ 和prototype属性对比
+
+constructor
+依据数据类型的构造函数返回类型
+优点：对于继承关系和数据类型的判断都比较标准
+缺点：null和undefined没有构造函数，会造成无法判断
+返回布尔值
+
+Object.prototype.toString.call()
+可以通过 toString() 来获取每个对象的类型。为了每个对象都能通过Object.prototype.toString() 来检测，需要以 Function.prototype.call() 或者 Function.prototype.apply() 的形式来调用，传递要检查的对象作为第一个参数。
+优点：浏览器的内置数据类型都可以准确的判断
+缺点：无法判断继承关系，任何实例都会会被返回object类型
