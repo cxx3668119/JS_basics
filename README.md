@@ -4,7 +4,7 @@
 
 有常见的算法题 以及常考的 Javascript html css vue
 
-题目 印自：前端小哥
+题目 引自：前端小哥
 
 
 
@@ -73,7 +73,8 @@ JS
 13.this指向★★
 14.作用域链★
 15.let/const/var的区别★★★
-16.ES6异步编程: Promise和async await★★★17.箭头函数★★
+16.ES6异步编程: Promise和async await★★★
+17.箭头函数★★
 18.JavaScript的运行机制★★★
 19.实现继承的几种方式★★
 20.垃圾回收★
@@ -83,7 +84,7 @@ JS
 手写
 1.防抖和节流★
 2.深拷贝★★★
-3.数组扁平化★★*
+3.数组扁平化★★★
 4.单例模式★★
 5.数组去重★★★
 6.手写promise all和promise.race★★

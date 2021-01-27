@@ -1,0 +1,21 @@
+let a = {
+  name:"张三",
+  age:14,
+  set(...args){
+    console.log(`姓名：${this.name},年龄:${this.age},参数：${args}`);
+  }
+}
+
+let b = {
+  name:"李四",
+  age:23,
+}
+
+a.set();
+a.set.call(b,1,2,3,4)
+a.set.apply(b,[23,14,2])
+a.set.bind(b,1,2,3,4)()
+
+call 直接调用 带参 改变this指向
+apply 直接调用 带参(以数组形式) 改变this指向
+bind 返回新的函数需要执行 带参 改变this指向
