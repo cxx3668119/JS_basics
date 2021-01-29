@@ -7,10 +7,11 @@
 // 4. arr和arr2合并成数组arr3。
 // 5. 去除数组arr3中重复内容
 
-let arr = [1, 2, , 3];
-console.log(arr.length);
-let arr1 = arr.splice(2, 1);
-console.log(arr);
-console.log(arr1);
-let arr2 = arr.map(parseInt)
-console.log(arr2);
+// let arr = [1, 2, , 3];
+// console.log(arr.length);
+// let arr1 = arr.splice(2, 1);
+// console.log(arr);
+// console.log(arr1);
+// let arr2 = arr.map(parseInt)
+// console.log(arr2);
+// 错意思 未来正解会补上
