@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      width: 100%;
+      height: 150px;
+      border-bottom: 1px solid red;
+      display: flex;
+    }
+
+    .header span {
+      flex: 1;
+      text-align: center;
+      line-height: 150px;
+    }
+
+    .cont {
+      width: 100%;
+      height: 250px;
+      display: flex;
+    }
+
+    .cont div {
+      flex: 1;
+      text-align: center;
+      line-height: 250px;
+      display: none;
+      background-color: red;
+    }
+
+    .bgc {
+      background-color: yellow;
+    }
+
+    .show {
+      display: block !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <div class="header">
+        <span class="bgc">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+      </div>
+      <div class="cont">
+        <div class="show conts">1</div>
+        <div class="conts">2</div>
+        <div class="conts">3</div>
+        <div class="conts">4</div>
+      </div>
+    </div>
+  </header>
+  <!-- <div class="zxc" style="width: 200px;height: 200px;background-color: red;"></div> -->
+  <script>
+    window.onload = function () {
+      let spans = document.getElementsByTagName('span');
+      let conts = document.getElementsByClassName('conts')
+      for (let i = 0; i < spans.length; i++) {
+        spans[i].index = i;
+        spans[i].onmouseover = function () {
+          for (let i = 0; i < spans.length; i++) {
+            spans[i].className = "";
+            conts[i].className = 'conts'
+          }
+          this.className = 'bgc'
+          conts[i].className = "conts show"
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
