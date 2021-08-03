@@ -1,0 +1,11 @@
+1、生成10-20之间的随机正整数，不包括数字10-20
+
+2、描述浏览器缓存机制，包括HTTP缓存
+
+3、实现一个render(str,parameter)，将str中的占位符parameter用填充测试用例
+
+const str = "下周一{{people1}}和{{people2}}去游泳"
+render(str,{
+  people1:'小明';
+  people2:'小红';
+})
