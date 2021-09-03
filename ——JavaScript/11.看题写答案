@@ -1,0 +1,37 @@
+
+const pro = new Promise((resolve, reject) => {
+  const innerpro = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(1);
+    }, 0);
+    console.log(2);
+    resolve(3);
+  });
+  innerpro.then(res => console.log(res));
+  resolve(4);
+  console.log("pro");
+})
+pro.then(res => console.log(res));
+console.log("end");
+
+
+// 2 pro end 3 4   ********** 一个promise只能输出一个res
+
+*******************************************************************************************************************************************************
+var a = 100;
+function fn() {
+  var b = 30;
+  function bar() {
+    console.log(a + b);
+    console.log(this);
+    console.log(this.b);
+  }
+  return bar;
+}
+var x = fn(),
+  b = 400;
+x();
+
+
+130/undefined
+*******************************************************************************************************************************************************
