@@ -105,8 +105,133 @@ let obj = {
 // })
 
 // 2、map映射 可以return 第二参数 this
-let arr1 = arr.map(function (item, index, arr) {
-  console.log(item, index, arr);
-  return item * 2
-})
-console.log(arr1);
+// let arr1 = arr.map(function (item, index, arr) {
+//   console.log(item, index, arr);
+//   return item * 2
+// })
+// console.log(arr1);
+
+// let user = [{
+//   'name': 'zhangsan',
+//   'age': 18,
+//   'sex': 'male'
+// }, {
+//   'name': 'wangwu',
+//   'age': 19,
+//   'sex': 'male'
+// }, {
+//   'name': 'lisi',
+//   'age': 18,
+//   'sex': 'male'
+// }]
+
+// user.map(e => {
+//   return e.name
+// })
+// console.log(user.map(e => {
+//   return e.name
+// }));
+
+// 3、filter
+// 返回布尔值，映射 filter 可以过滤掉数组中的null undefined
+// let arr2 = [1, 2, 3, 4, null, undefined, -1]
+// console.log(arr.filter((item, index, arr) => {
+//   return item > 3
+// }));
+
+// console.log(arr.filter((item, index, arr) => {
+//   return index > 3
+// }));
+
+// console.log(arr2.filter(e => {
+//   return e
+// }));
+
+// 此处 null == undefined  '' != undefined false != undefined NaN != undefined
+
+// console.log(arr.some((item, index, arr) => {
+//   return item % 2 === 0
+// }));
+// // 有一个就返回true
+
+// console.log(arr.every((item, index, arr) => {
+//   return item % 2 === 0
+// }));
+// 全部符合返回true
+
+
+// (acc, item, index, arr) acc为累加器
+// reduce
+// 1、第二个参数为累加器的初始值 
+// 求和
+// console.log(arr.reduce(function (acc, cur, idx, src) {
+//   return acc + cur
+// }, 0));
+// 2、求数组里对象的和
+// let result = 0
+// let arr2 = [{ x: 1 }, { x: 2 }, { x: 3 }]
+// console.log(arr2.reduce((acc, cur) =>
+//   acc + cur.x
+//   , result)
+// );
+// 3、将二维数组转化为一维数组
+// let flattened = [[0, 1], [2, 3], [4, 5]]
+
+// console.log(flattened.reduce((acc, cur) =>
+//   acc.concat(cur), []
+// ));
+// 4、数组元素出现的次数
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+// countedNames is:
+// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+// 个人理解：初始一个对象，判断item是否在累加器中，如果在，对象中key为item的值+1 不在的话给其初始值1
+// console.log(names.reduce((acc, item) => {
+//   if (item in acc) {
+//     acc[item]++
+//   } else {
+//     acc[item] = 1
+//   }
+//   return acc
+// }, {}));
+
+// 5、按属性对object分类
+var people = [
+  { name: 'Alice', age: 21 },
+  { name: 'Max', age: 20 },
+  { name: 'Jane', age: 20 }
+];
+
+function demo(arr, key) {
+  return arr.reduce((acc, item) => {
+    let result = item[key]  //item.age
+    if (!acc[result]) {     //添加新对象key名
+      acc[result] = []  //赋值key名的值为空数组
+    }
+    acc[result].push(item)  //添加值
+    return acc
+  }, {})
+}
+
+console.log(demo(people, 'age'));
+
+// function groupBy(objectArray, property) {
+//   return objectArray.reduce(function (acc, obj) {
+//     var key = obj[property];
+//     if (!acc[key]) {
+//       acc[key] = [];
+//     }
+//     acc[key].push(obj);
+//     return acc;
+//   }, {});
+// }
+
+// var groupedPeople = groupBy(people, 'age');
+// groupedPeople is:
+// {
+//   20: [
+//     { name: 'Max', age: 20 },
+//     { name: 'Jane', age: 20 }
+//   ],
+//   21: [{ name: 'Alice', age: 21 }]
+// }
