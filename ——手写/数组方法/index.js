@@ -246,24 +246,24 @@ var allbooks = friends.reduce(function (prev, curr) {
 
 
 // 7、数组去重
-// let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
-// let myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
-//   if (accumulator.indexOf(currentValue) === -1) {
-//     accumulator.push(currentValue)
-//   }
-//   return accumulator
-// }, [])
+let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+let myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
+  if (accumulator.indexOf(currentValue) === -1) {
+    accumulator.push(currentValue)
+  }
+  return accumulator
+}, [])
 
-// console.log(myOrderedArray)
+console.log(myOrderedArray)
 
-// let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
-// let result = arr.sort().reduce((init, current) => {
-//   if (init.length === 0 || init[init.length - 1] !== current) {
-//     init.push(current);
-//   }
-//   return init;
-// }, []);
-// console.log(result); //[1,2,3,4,5]
+let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let result = arr.sort().reduce((init, current) => {
+  if (init.length === 0 || init[init.length - 1] !== current) {
+    init.push(current);
+  }
+  return init;
+}, []);
+console.log(result); //[1,2,3,4,5]
 
 // 8、按顺序运行Promise
 function runPromiseInSequence(arr, input) {
