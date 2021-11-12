@@ -1,0 +1,85 @@
+（掌握）简述Chome盒模型与IE盒模型的区别
+  标准盒模型W3C 盒子模型的范围包括 margin、border、padding、content
+  IE（怪异盒模型）：content 部分包含了 border 和 pading。
+（掌握）行内元素和块级元素都有哪一些？
+  行内元素：span a input select strong
+  块级元素：div ul table h1 p 
+（掌握）BFC
+ 块级格式化上下文 
+ 1.避免外边距重叠
+ 2.清楚浮动
+ 3.阻止元素被浮动元素覆盖
+（掌握）什么是弹性布局？
+ display:flex 
+（掌握）html5有哪些新特性？
+  地理定位 canvas svg storage websocket
+（掌握）position有哪些属性？
+  position realtive absolute fixed static sticky
+（掌握）请说出1.000012px，1rem，1vh，1em各自代表的含义？
+  1像素 1html根元素fontsize 1/100视框 1当前元素fontsize
+（掌握）什么是SPA？
+  SPA页面 初次加载完所有文件不跳转 
+  优点：用户体验好 前后端分离
+  缺点：SEO 初次加载大 导航无效
+（掌握）简述优雅降级与渐进增强
+  1、针对最高级最完善的浏览器去设计，注重内容本身
+  2、完成最基础的需求逐渐去适应未来的需要
+（掌握）重绘与重排
+（掌握）解释下浮动和它的工作原理？清除浮动的方法
+  1、脱离文档流 不占空间
+  2、clear：both after:{
+    占位 
+    clear:both
+  }
+（掌握）如何让一个盒子在页面垂直水平居中
+ 1、{
+   display:flex
+   justify-content:center
+   align-items:center
+ }
+ {
+   position:absolute
+   left:50%
+   top:50%
+   transform:translate(-50%,-50%)
+ }
+ {
+   position:absolute
+   top:0
+   right:0
+   bottom:0
+   left:0
+ }
+（掌握）前端性能优化方案
+  精灵图 减少HTTP请求 减少操作DOM 代码压缩 缓存 图片懒加载
+（掌握）css选择器
+  类选择器 ID选择器 属性选择器 伪类选择器 通配选择器 标签选择器 为元素
+（掌握）CSS3有哪些新特性
+  transform border-radio box-shadow scale
+（掌握）什么是空元素？
+  br、meta、hr、link、input、img
+（掌握）如何实现浏览器内多个标签页之间的通讯
+  iframe
+（掌握）为什么要初始化css样式
+  1.浏览器差异 2.提高编码质量
+（掌握）说说对canvas，svg，webgl的理解
+ Canvas 是HTML5新增的一个元素对象，名副其实就是一个画布，浏览器 js 配有相应的操作api，可以不再依赖其他的API或组件而直接绘图，相当于2D的API。Canvas 适用于位图，高数据量高绘制频率（帧率）的场景，如动画、游戏；
+ SVG 是给数据就可以绘制点、线、图形的，基于 XML 的标记语言；SVG 适用于矢量图，低数据量低绘制频率的场景，如图形、图表；
+ WebGL（全写Web Graphics Library）是一种3D绘图标准，通俗说WebGL是canvas绘图中的3D版本。因为原生的WebGL很复杂，我们经常会使用一些三方的库，如three.js等，WebGL 主要用来做 3D 展示、动画、游戏。
+（掌握）浏览器是如何渲染UI的？
+（掌握）em、rem的区别
+  当前对象的fontsize html根元素上的fontsize
+（掌握）解释csssprites，如何使用。
+  小图合到大图上
+（掌握）介绍一下你对浏览器内核的理解？
+  trident内核 gecko内核 
+（掌握）如何进行seo优化？
+  合理的title 语义化 少用iframe
+（掌握）如何实现.499987px边框
+  sclae 
+（掌握）less和sass的区别
+（了解）xhtml和html有什么区别
+（了解）如何处理HTML5新标签的浏览器兼容性问题
+（了解）HTML5的离线储存怎么使用，工作原理能不能解析一下？
+（了解）页面导入样式时，使用link和@import有什么区别
+  link兼容 link优先加载

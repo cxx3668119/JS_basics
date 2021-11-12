@@ -1,0 +1,72 @@
+（掌握）什么是“use strict”,好处和坏处
+  严格模式 使代码更严谨 提高编译器效率
+（掌握）console.log(0.1 + 0.2)
+  有误差 不等于0.3 
+（掌握）数组pop(), push(), unshift(), shift()的区别
+  删除最后一个 在最后添加 在第一个添加 删除第一个
+（掌握）==和===
+  比较值 比较值和类型
+（掌握）事件冒泡和事件捕获到底有何区别？
+  从上到下 触发子元素的事件 父元素也触发
+（掌握）JS数据类型
+  number string boolean symbol null undefined
+  object 
+（掌握）什么是typescript
+  在JS基础上增加类型检测 并且可以定义接口 等
+（掌握）什么是模块化编程？
+（掌握）简述javascript原型、原型链？有什么特点
+  每一个构造函数  都有一个prototype属性指向一个对象，这个对象就是构造函数实例的原型，每一个原型都有一个__proto__属性执行原型对象，用来获取原型对象上的方法，直到执行原型链的最终端null为止
+（掌握）解释javascript中的作用域和变量声明提升
+移动到作用域的最前端
+（掌握）谈谈this对象的理解，call()和apply()的区别
+
+（掌握）js 的typeof返回有哪些数据类型？
+  string number boolean undefined object function symbol
+（掌握）什么是闭包？为什么要用它？
+  函数执行后返回的是一个内部函数，并被外部变量所引用，可以在内部函数中访问外部函数作用域
+  优点：避免污染全局、变量长期在内存中
+  缺点：对内存消耗有负面影响，无法被垃圾回收、可能获得意外的值
+（掌握）简述js继承的方式
+
+（掌握）给String添加一个trim()方法，去除开头和结尾的空格符号
+（掌握）深拷贝和浅拷贝的区别
+  浅拷贝：增加一个指针指向引用的地址值
+  深拷贝：开创一个新的地址值 新指针指向新地址值
+（掌握）如何实现深拷贝
+（掌握）javascript 的垃圾回收机制讲一下
+  一块内存不可回收 不可使用直到浏览器进程结束
+（掌握）介绍下 promise 的特性、优缺点
+  一个promise对象 有三个状态pending进行中 fulfilled成功 rejected失败状态
+  解决回调地狱 
+  接收两个参数 reslove rejcet then =>res catch=>rej
+ .all 全部成功执行 .race有一个就执行返回值 .finally无论怎么样都执行
+（掌握）请描述一下 cookies，sessionStorage 和 localStorage 的区别？
+ cookies 4kb sS lS 5M
+ cookies 自动携带 
+ cookies 可以设置过期时间 
+ cookies 做状态保持的
+（掌握）浏览器缓存策略
+（掌握）简述同源策略与跨域
+  协议 端口 主机 都需要一样
+（掌握）跨域解决方案
+  jsonp js跨域机制
+  cros 后端设置可跨域 资源共享
+  nginx反向代理
+（掌握）从浏览器地址栏输入URL到显示页面的步骤
+（掌握）JavaScript 中的作用域（scope）是指什么？
+  唯一
+（掌握）解释 JavaScript 中的 null 和 undefined
+  空 找不到
+（掌握）浏览器的事件循环
+  JS 分为宏任务 微任务 JS执行机制从上到下执行 异步队列先执行微任务，微任务队列执行完了再执行宏任务
+（掌握）解释事件冒泡以及如何阻止它？
+ event.stopPropagation()（
+（掌握）什么是防抖和节流？有什么区别？如何实现？
+
+（掌握）常见web安全及防护原理 
+
+（掌握）事件传播的三个阶段是什么
+  捕获 > 目标 > 冒泡
+（了解）谈谈你对AMD、CMD的理解
+（了解）new操作符到底干了什么？
+  1、创建空对象、this指向空对象、this的原型为构造函数的原型，返回this
