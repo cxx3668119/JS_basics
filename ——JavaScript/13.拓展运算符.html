@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- q1 哪些对象可以使用... -->
+    <!-- 可迭代对象，数组、字符串、arguments、nodeList、Set、Map -->
+
+    <!-- q2 为什么可以使用... -->
+    <!-- 扩展运算符默认调用的是iterator接口，任何部署了iterator接口的数据结构都可以使用，可迭代对象包含了Symbol.iterator：为不同的数据结构提供统一的访问接口，核心是为了给es6的for-or提供功能 -->
+    <script>
+        console.log([]);
+        console.log('123');
+        console.log(new Set());
+        console.log(new Map());
+    </script>
+</body>
+
+</html>
